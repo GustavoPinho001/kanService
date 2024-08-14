@@ -20,4 +20,27 @@ const DetailsSalas = () =>{
 
 }
 
+  if (!salas) {
+    return (
+      <div className="w-screen h-screen flex items-center justify-center bg-white p-4">
+        <p className="text-xl">Sala não encontrada.</p>
+        <Link to="/" className="bg-black text-white text-2xl mt-4 rounded-full p-4 hover:bg-gray-700 hover:text-gray-300 transition duration-300">← Voltar</Link>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-screen h-screen flex items-start justify-start bg-white p-4">
+      <div className="w-[40%] text-left text-black font-poppins">
+        <h1 className="font-semibold text-4xl tracking-widest">SOBRE A SALA {salas.id}</h1>
+        <p className="text-xl mt-10 tracking-tighter">{salas.descricao1}</p>
+        <p className="text-xl mt-2 tracking-tighter">{salas.}</p>
+        <h5 className="text-4xl mt-2 tracking-tighter mb-20 p-2">{salas.quantidadeCadeiras} lugares disponíveis</h5>
+        <Link to="/" className="bg-black text-white text-2xl rounded-full p-2 hover:bg-white hover:text-black transition duration-300">←</Link>
+      </div>
+    </div>
+  );
+};
+
+
 export default DetailsSalas;
