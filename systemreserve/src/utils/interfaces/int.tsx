@@ -3,11 +3,11 @@ export interface Sala {
     projetor: boolean;
     arCondicionado: boolean;
     lousas: number;
-    ocupada: boolean;
+    disponível: boolean;
     id: number;
     descricao1: string;
     descricao2: string;
     nome: string;
-    imagem : string
+    imagem : string;
   }
   
