@@ -4,5 +4,10 @@ export interface Sala {
     arCondicionado: boolean;
     lousas: number;
     ocupada: boolean;
-    id :number;
-}
+    id: number;
+    descricao1: string;
+    descricao2: string;
+    nome: string;
+    imagem : string
+  }
+  
