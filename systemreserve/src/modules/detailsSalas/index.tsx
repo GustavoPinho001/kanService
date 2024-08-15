@@ -19,14 +19,14 @@ const DetailsSalas = () => {
     <div className="w-screen h-screen flex flex-col bg-white">
 
       {/* Cabeçalho */}
-      <header className="w-full bg-white p-4 text-black text-left text-4xl font-montserrat-semibold border-b-gray-500">
+      <header className="w-full bg-white p-4 text-black text-left text-4xl font-plex-mono border-b-2 border-b-gray-300">
         Detalhes da {sala.nome}
       </header>
 
       <div className="flex flex-grow flex-row px-8 py-10">
         {/* Esquerda */}
-        <div className="w-1/2 text-4xl flex flex-col text-black font-montserrat-thin">
-          <p className="text-2xl text-left py-10">{sala.descricao1}</p>
+        <div className="w-1/2 text-4xl flex flex-col text-black font-plex-mono">
+          <p className="text-2xl text-left pt-5 pb-10">{sala.descricao1}</p>
           <p className="text-2xl text-left">{sala.descricao2}</p>
                 {/* Back Link */}
       <Link to="/" className="flex items-center justify-center w-12 h-12 bg-white text-black rounded-full hover:bg-black hover:text-white transition duration-300 my-20">
@@ -35,7 +35,7 @@ const DetailsSalas = () => {
         </div>
 
         {/* Direita - Split into Table and Image Vertically */}
-        <div className="w-1/2 flex flex-col">
+        <div className="w-1/2 h-1/2 flex flex-col">
           {/* Table Section (Top Half) */}
           <div className="flex-grow bg-gray-50 p-4 border-b border-gray-300">
             <table className="min-w-full min-h-1 bg-white border border-gray-200">
