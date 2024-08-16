@@ -11,7 +11,6 @@ const DetailsSalas = () => {
     return (
       <div className="w-screen h-screen flex items-center justify-center bg-gray-100 p-4">
         <p className="text-xl">Sala não encontrada.</p>
-        <Link to="/" className="bg-black text-white text-2xl mt-4 rounded-full p-4 hover:bg-gray-700 hover:text-gray-300 transition duration-300">← Voltar</Link>
       </div>
     );
   }
@@ -28,6 +27,7 @@ const DetailsSalas = () => {
         <div className="w-1/2 text-4xl flex flex-col text-black font-plex-mono">
           <p className="text-2xl text-left pt-5 pb-10">{sala.descricao1}</p>
           <p className="text-2xl text-left">{sala.descricao2}</p>
+          <Link to="/" className="w-12 h-12  bg-black text-white text-2xl mt-4 rounded-full  hover:bg-gray-700 hover:text-gray-300 transition duration-300">←</Link>
         </div>
 
         {/* Direita - Split into Image and Table Vertically */}
