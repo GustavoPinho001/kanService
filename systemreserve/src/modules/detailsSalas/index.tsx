@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import salas from "../../utils/arreys/arrey";
+import salaimage from "../../assets/sala10.svg";
 
 const DetailsSalas = () => {
   const { id } = useParams<{ id: string }>(); // Obtém o ID da URL
@@ -17,10 +18,9 @@ const DetailsSalas = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col bg-white">
-
       {/* Cabeçalho */}
       <header className="w-full bg-white p-4 text-black text-left text-4xl font-plex-mono border-b-2 border-b-gray-300">
-        Detalhes da {sala.nome}
+        {sala.nome}
       </header>
 
       <div className="flex flex-grow flex-row px-8 py-10">
@@ -28,17 +28,18 @@ const DetailsSalas = () => {
         <div className="w-1/2 text-4xl flex flex-col text-black font-plex-mono">
           <p className="text-2xl text-left pt-5 pb-10">{sala.descricao1}</p>
           <p className="text-2xl text-left">{sala.descricao2}</p>
-                {/* Back Link */}
-      <Link to="/" className="flex items-center justify-center w-12 h-12 bg-white text-black rounded-full hover:bg-black hover:text-white transition duration-300 my-20">
-        <span className="text-3xl">←</span>
-      </Link>
         </div>
 
-        {/* Direita - Split into Table and Image Vertically */}
-        <div className="w-1/2 h-1/2 flex flex-col">
-          {/* Table Section (Top Half) */}
-          <div className="flex-grow bg-gray-50 p-4 border-b border-gray-300">
-            <table className="min-w-full min-h-1 bg-white border border-gray-200">
+        {/* Direita - Split into Image and Table Vertically */}
+        <div className="w-1/2 flex flex-col">
+          {/* Image Section (Top Half) */}
+          <div className="flex-grow bg-gray-50 p-4 flex items-center justify-center">
+            <img src={salaimage} alt="Sala" className="h-1/6 object-contain" />
+          </div>
+
+          {/* Table Section (Bottom Half) */}
+          <div className="flex-grow bg-gray-50 p-4 border-t border-gray-300 overflow-auto">
+            <table className="min-w-full bg-white border border-gray-200">
               <tbody>
                 <tr className="border-b">
                   <th className="px-6 py-4 text-left text-xl font-medium text-gray-500">Projetor</th>
