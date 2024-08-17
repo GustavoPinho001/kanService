@@ -1,0 +1,9 @@
+.header {
+    width: 100vw; /* w-screen */
+    height: 100vh; /* h-screen */
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: center; /* justify-center */
+    background-color: #f7fafc; /* bg-gray-100 */
+    padding: 1rem; /* p-4 */
+  }
